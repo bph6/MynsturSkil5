@@ -27,6 +27,8 @@ public class Sesar {
     int[] outputA = new int[n];
     int[] outputB = new int[n];
     //int[] outputC = new int[n];...
+    String[] outputALetters = new String[n];
+    String[] outputBLetters = new String[n];
 
     for (int k = 0; k<n ; k++) {
       for (int l = 0; l<alphabet.length; l++)
@@ -37,13 +39,16 @@ public class Sesar {
 
     for (int i = 0; i<n ; i++) {
       outputA[i] = ((14*inputNUM[i])+21)%alphabet.length;
+      outputALetters[i] = alphabet[outputA[i]]
     }
     System.out.println("A: "+Arrays.toString(outputA));
-
+    System.out.println("A: "+Arrays.toString(outputALetters));
     for (int j = 0; j<n ; j++) {
       outputB[j] = ((-7*inputNUM[j])+1)%alphabet.length;
+      outputBLetters[j] = alphabet[outputB[j]]
     }
     System.out.println("B: "+Arrays.toString(outputB));
+    System.out.println("B: "+Arrays.toString(outputBLetters));
 
   }
 }
